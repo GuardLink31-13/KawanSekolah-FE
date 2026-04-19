@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* src/index.css — tambahkan di bagian bawah */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600&family=DM+Serif+Display&display=swap');
+
+:root {
+  --sage:        #2D6A4F;
+  --sage-mid:    #52B788;
+  --sage-pale:   #D8F3DC;
+  --cream:       #F8F4EC;
+  --cream-dark:  #F0EDE4;
+  --cream-border:#C8C0A8;
+  --ink:         #3D405B;
+  --ink-muted:   #A0A3B8;
+  --gold:        #E9C46A;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+}
+
+.font-display { font-family: 'DM Serif Display', serif; }
+
+.field-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.field {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--cream-border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 0.8125rem;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+}
+
+.field::placeholder { color: var(--ink-muted); }
+
+.field:focus {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(45,106,79,0.12);
+}
+
+/* Tailwind-compatible custom colors */
+.bg-sage         { background-color: var(--sage) !important; }
+.bg-sage-pale    { background-color: var(--sage-pale) !important; }
+.bg-cream-DEFAULT{ background-color: var(--cream) !important; }
+.bg-cream-dark   { background-color: var(--cream-dark) !important; }
+.text-sage       { color: var(--sage) !important; }
+.text-ink        { color: var(--ink) !important; }
+.text-ink-muted  { color: var(--ink-muted) !important; }
+.border-sage     { border-color: var(--sage) !important; }
+.border-sage-mid { border-color: var(--sage-mid) !important; }
+.border-cream-border { border-color: var(--cream-border) !important; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
