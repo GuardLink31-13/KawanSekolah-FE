@@ -62,7 +62,7 @@ export default function RegisterPage({ onGoLogin, onGoOtp }: Props) {
 
         {/* Stepper */}
         <div className="bg-sage flex items-center gap-0 px-6 pb-4 border-b border-white/10">
-          {STEP_LABELS.map((label, i) => (
+          {STEP_LABELS.map((_, i) => (
             <div key={i} className="flex items-center flex-1 last:flex-none">
               <div className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-semibold flex-shrink-0 border transition-all
                 ${i === step

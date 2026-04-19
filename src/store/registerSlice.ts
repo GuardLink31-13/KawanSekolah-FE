@@ -2,7 +2,7 @@
 
 
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
-import { apiRegister, saveToken } from '../Api'
+import { apiRegister } from '../Api'
 
 export type Role = '' | 'guru' | 'murid'
 
